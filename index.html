@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Motion Hover Effects | Demo 1</title>
+	<meta content="How to Create Motion Hover Effects with Image Distortions using Three.js" name="description" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta name="keywords" content="tutorial, three.js, hover effect, image distortion, webgl" />
+	<meta name="author" content="Niccolò Miranda and Clément Roche for Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+	<link href="css/style1.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="body d1">
+	<main class="app">
+		<div class="frame">
+			<div class="frame__demos">
+				<a href="index.html" class="frame__demo frame__demo--current">Demo 1</a>
+				<a href="index2.html" class="frame__demo">Demo 2</a>
+				<a href="index3.html" class="frame__demo">Demo 3</a>
+			</div>
+			<div class="frame__wrap">
+				<div class="frame__credits">
+					<div class="credit-wrap">
+						<div class="frame__role">art direction / dev / photography</div>
+						<a aria-label="credit-1" rel="noopener" target="_blank" draggable="false" href="https://twitter.com/niccolomiranda" class="frame__link">Niccolò miranda</a>
+					</div>
+					<div class="credit-wrap">
+						<div class="frame__role">Development</div>
+						<a aria-label="credit-2" rel="noopener" target="_blank" draggable="false" href="https://twitter.com/clementroche_" class="frame__link">Clément roche</a>
+					</div>
+				</div>
+				<div class="frame__title-wrap">
+					<div class="frame__init"><em class="italic">presents</em></div>
+					<div class="frame__title">
+						<span class="span_1">How to Create Motion Hover Effects</span><br /><span class="span_2">with Image Distortions using Three.js</span>
+					</div>
+				</div>
+				<div class="frame__links">
+					<div class="frame__inner">
+						<a aria-label="frame-link" rel="noopener" target="_blank" draggable="false" href="https://tympanus.net/Tutorials/Interactive3DCharacter/" class="frame__link fl_1">Previous demo</a><a aria-label="frame-article" rel="noopener" target="_blank" draggable="false" href="https://tympanus.net/codrops/?p=44003" class="frame__link fl_1">Article</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="grid-items">
+				<a aria-label="link-1" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
+					<h1 class="h1">montmartre</h1>
+					<div class="text">cemetery, paris</div>
+					<img src="img/demo1/img1.jpg" />
+				</a>
+				<div class="divider"></div>
+				<a aria-label="link-2" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
+					<h1 class="h1">bir-hakem</h1>
+					<div class="text">bridge, paris</div>
+					<img src="img/demo1/img2.jpg" />
+				</a>
+			</div>
+			<div class="grid-items g2">
+				<div class="divider d2"></div>
+				<a aria-label="link-3" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
+					<h1 class="h1">république</h1>
+					<div class="text">people, paris</div>
+					<img src="img/demo1/img3.jpg" />
+				</a>
+				<div class="divider d3"></div>
+			</div>
+		</div>
+	</main>
+	<script src="js/three.min.js"></script>
+    <script src="js/TweenLite.min.js"></script>
+	<script src="js/Math.js"></script>
+	<script src="js/EffectShell.js"></script>
+	<script src="js/RGBShiftEffect.js"></script>
+	<script>
+	const container = document.body
+	const itemsWrapper = document.querySelector('.grid')
+	const effect = new RGBShiftEffect(container, itemsWrapper, { strength: 0.25 })
+	</script>
+</body>
+
+</html>
