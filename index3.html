@@ -14,7 +14,7 @@
     <link href="css/style3.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="body d3">
+<body class="body loading">
     <main class="app">
         <div class="frame">
             <div class="frame__demos">
@@ -51,15 +51,15 @@
             <a aria-label="link-3" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
                 <h1 class="h1">los angeles</h1>
                 <div class="text">ranger pickup</div>
-                <img src="img/demo3/img1.jpg" />
+                <img class="content__img" src="img/demo3/img1.jpg" alt="img1"/>
             </a>
             <div class="div-block">
-                <img src="img/slash.svg" alt="" class="image" />
+                <img src="img/slash.svg" alt="slash" class="image" />
             </div>
             <a aria-label="link-3" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
                 <h1 class="h1">california</h1>
                 <div class="text">city lights</div>
-                <img src="img/demo3/img2.jpg" />
+                <img class="content__img" src="img/demo3/img2.jpg" alt="img2"/>
             </a>
         </div>
     </main>
@@ -68,10 +68,23 @@
     <script src="js/Math.js"></script>
     <script src="js/EffectShell.js"></script>
     <script src="js/StretchEffect.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
     <script>
     const container = document.body
     const itemsWrapper = document.querySelector('.grid')
-    const effect = new StretchEffect(container, itemsWrapper)
+
+    // Preload images
+    const preloadImages = () => {
+        return new Promise((resolve, reject) => {
+            imagesLoaded(document.querySelectorAll('img'), resolve);
+        });
+    };
+    // And then..
+    preloadImages().then(() => {
+        // Remove the loader
+        document.body.classList.remove('loading');
+        const effect = new StretchEffect(container, itemsWrapper)
+	});
     </script>
 </body>
 

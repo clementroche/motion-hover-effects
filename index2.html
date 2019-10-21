@@ -14,7 +14,7 @@
     <link href="css/style2.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="body d2">
+<body class="body loading">
     <main class="app">
         <div class="frame">
             <div class="frame__demos">
@@ -48,19 +48,19 @@
         </div>
         <div class="grid">
             <a aria-label="link-1" target="_blank" rel="noopener" draggable="false" class="link l-d2 w-inline-block">
-                <h1 class="h1 h-d2">buckskin</h1>
+                <h1 class="h1">buckskin</h1>
                 <div class="text">people, arizona</div>
-                <img src="img/demo2/img1.jpg" />
+                <img class="content__img" src="img/demo2/img1.jpg" alt="img1"/>
             </a>
             <a aria-label="link-2" target="_blank" rel="noopener" draggable="false" class="link l-d2 w-inline-block">
-                <h1 class="h1 h-d2">antelope</h1>
+                <h1 class="h1">antelope</h1>
                 <div class="text">arizona, usa</div>
-                <img src="img/demo2/img2.jpg" />
+                <img class="content__img" src="img/demo2/img2.jpg" alt="img2"/>
             </a>
             <a aria-label="link-3" target="_blank" rel="noopener" draggable="false" class="link l-d2 w-inline-block">
                 <h1 class="h1 h-d2">pulpit rock</h1>
                 <div class="text">fjords, norway</div>
-                <img src="img/demo2/img3.jpg" />
+                <img class="content__img" src="img/demo2/img3.jpg" alt="img3"/>
             </a>
         </div>
     </main>
@@ -69,10 +69,23 @@
     <script src="js/Math.js"></script>
     <script src="js/EffectShell.js"></script>
     <script src="js/TrailsEffect.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
     <script>
     const container = document.body
     const itemsWrapper = document.querySelector('.grid')
-    const effect = new TrailsEffect(container, itemsWrapper)
+    
+    // Preload images
+    const preloadImages = () => {
+        return new Promise((resolve, reject) => {
+            imagesLoaded(document.querySelectorAll('img'), resolve);
+        });
+    };
+    // And then..
+    preloadImages().then(() => {
+        // Remove the loader
+        document.body.classList.remove('loading');
+        const effect = new TrailsEffect(container, itemsWrapper)
+	});
     </script>
 </body>
 

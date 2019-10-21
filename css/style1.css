@@ -1,3 +1,12 @@
+
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+
 body {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   color: #333;
@@ -250,6 +259,12 @@ h1 {
 .frame__init {
   margin-bottom: 5px;
   text-align: center;
+}
+
+.italic {
+  text-transform: none;
+  color: #333;
+  font-style: italic;
 }
 
 .frame__link {

@@ -1,3 +1,11 @@
+
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
 body {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   color: #333;
@@ -233,12 +241,6 @@ h1 {
   margin-bottom: 12px;
 }
 
-.italic {
-  text-transform: none;
-  color: #f1e9db;
-  font-style: italic;
-}
-
 .frame__title {
   text-align: center;
   color: #f1e9db;
@@ -248,6 +250,12 @@ h1 {
 .frame__init {
   margin-bottom: 5px;
   text-align: center;
+}
+
+.italic {
+  text-transform: none;
+  color: #f1e9db;
+  font-style: italic;
 }
 
 .frame__link {

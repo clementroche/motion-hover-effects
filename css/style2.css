@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   color: #333;
@@ -119,6 +125,17 @@ h1 {
 
 .frame__demos {
   text-align: center;
+}
+
+.frame__init {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.italic {
+  text-transform: none;
+  color: #333;
+  font-style: italic;
 }
 
 .frame__demo {
@@ -300,27 +317,29 @@ h1 {
 
   .frame__init {
     font-size: 0.75rem;
-  }
+    margin-bottom: 5px;
+    text-align: center;
+}
 
-  .frame__link {
-    font-size: 0.75rem;
-  }
+.frame__link {
+  font-size: 0.75rem;
+}
 
-  .frame__link.fl_1 {
-    margin-top: 8px;
-  }
+.frame__link.fl_1 {
+  margin-top: 8px;
+}
 
-  .frame__inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-  }
+.frame__inner {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
 }
 
 @media (max-width: 767px) {
