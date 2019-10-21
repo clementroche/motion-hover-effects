@@ -235,10 +235,13 @@ h1 {
 
 .italic {
   text-transform: none;
+  color: #f1e9db;
+  font-style: italic;
 }
 
 .frame__title {
   text-align: center;
+  color: #f1e9db;
 }
 
 
