@@ -23,7 +23,7 @@ This resource can be used freely if integrated or build upon in personal or comm
 
 Follow Niccolò: [Twitter](https://twitter.com/niccolomiranda), [Dribbble](https://dribbble.com/niccolomiranda), [Instagram](https://www.instagram.com/niccolomiranda/), [LinkedIn](https://www.linkedin.com/in/niccolomiranda/) 
 
-Follow Clément: [Twitter](https://twitter.com/clementroche_), [LinkedIn](https://www.linkedin.com/in/clment-roche/), [Codepen](https://codepen.io/ClementRoche/)
+Follow Clément: [Twitter](https://twitter.com/clementroche_), [LinkedIn](https://www.linkedin.com/in/clément-roche/), [Codepen](https://codepen.io/ClementRoche/)
 
 Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/codrops), [GitHub](https://github.com/codrops), [Instagram](https://www.instagram.com/codropsss/)
 
