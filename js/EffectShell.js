@@ -19,7 +19,7 @@ class EffectShell {
     // renderer
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     this.renderer.setSize(this.viewport.width, this.viewport.height)
-    this.renderer.setPixelRatio = window.devicePixelRatio
+    this.renderer.setPixelRatio(window.devicePixelRatio)
     this.container.appendChild(this.renderer.domElement)
 
     // scene
